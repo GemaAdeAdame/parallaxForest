@@ -128,7 +128,7 @@ section #text {
     text-shadow: 2px 5px 0px #1e1d1f;  }
 #text #logo{ position: relative; z-index: 1000;}
 .pasos{ display: flex; flex-wrap: wrap; gap:2%; justify-content: space-between; width:100%;}
-.pasos div{    display: grid;   }
+.pasos div{    display: grid;     justify-items: center;  }
 p{    font-size: 1.2rem;}
 h3{ color: white; text-align: center;}
 .greenbtn{ background-color:#6BC047; color: white; padding: 12px; font-size: 1.2rem; align-items: center;}
@@ -136,5 +136,7 @@ h3{ color: white; text-align: center;}
     align-items: center;
     width: 100%;
     justify-content: center; padding: 25px 0;}
+    h1, h2, h3,h4,h5,h6{font-family: 'Chewy', cursive;}
+
     
 
