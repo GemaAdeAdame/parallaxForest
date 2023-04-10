@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Logo from './images/logoAventurero.png'
-import City from './images/city6.png'
+import City from './images/city5.png'
 import GolondrinaL from './images/golIzqui.png'
 import GolondrinaR from './images/goldere.png'
 
