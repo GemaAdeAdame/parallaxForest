@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from '../../api/axios'
 
+
 const REGISTRATION_URL = '/api/register'
 
 function Register() {
@@ -33,7 +34,8 @@ function Register() {
         {success ? (
                 <section className='success'>
                     <h2>¡Registro completado!</h2>
-                    <a href='#' className='btn-login'>Ve al inicio de sesión</a>
+                    <button className='btn-login' onClick={() => window.location.pathname='/Login'}>Ir al inicio de sesión</button>
+
                 </section> 
             ) : (
                 <section>
@@ -61,8 +63,7 @@ function Register() {
                                 />
                                 <button className='btn'>Registrarse</button>
                             </form>
-
-                            <a href="/login" className='btn-login'>Iniciar sesión</a> 
+                            <button className='btn-login' onClick={() => window.location.pathname='/Login'}>Ir al inicio de sesión</button>
                         </div>
                 </section>
             )}

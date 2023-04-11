@@ -15,7 +15,7 @@
 
 body {
     overflow-x: hidden;
-    background: #fff;
+    background: #ffffff;
     min-height: 100vh;
 }
 
@@ -132,6 +132,7 @@ section #text {
 p{    font-size: 1.2rem;}
 h3{ color: white; text-align: center;}
 .greenbtn{ background-color:#6BC047; color: white; padding: 12px; font-size: 1.2rem; align-items: center;}
+.abtn {  color: #6BC047}
 .containerFlex{      display: flex;
     align-items: center;
     width: 100%;

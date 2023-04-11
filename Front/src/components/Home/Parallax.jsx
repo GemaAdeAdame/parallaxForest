@@ -6,7 +6,8 @@ import Rocas from '../images/rocas.png'
 import CiudadBosque from '../images/CiudadBosque.png'
 import GolondrinaDerecha from '../images/golondrinaDerecha.png'
 import GolondrinaIzquierda from '../images/golondrinaIzquierda.png'
-import "./Home.css"
+import "./Home.css";
+
 
 function Parallax() {
 
@@ -53,7 +54,7 @@ function Parallax() {
         <img src={Rocas} id="rocks" />
         <img src={Agua} id="water" />
        
-        <a href="#" id="btn">
+        <a href="/Login" id="btn">
          Entrar
         </a>
       </section>

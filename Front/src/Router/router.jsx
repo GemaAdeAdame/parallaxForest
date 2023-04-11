@@ -1,22 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home/Home.jsx';
-import Login from './components/login/login.jsx';
-import Register from './components/registro/register.jsx';
-import usersList from './components/dashboard/usersList.jsx';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Home from './components/Home';
+import Login from './components/Login';
+import Register from './components/Register';
 
+function App() {
+  const router = createBrowserRouter([
+    {
+      path:"/",
+      element:<><Home /> </>
+    },
+    {
+      path:"/Register",
+      element:<> <Register />  </>
+    },
+    {
+      path: "/Login",
+      element: <> < Login/> </>
+    }
 
-function Router() {
+  ]);
+
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/Home" component={Home} />
-        <Route path="/Login" component={Login} />
-        <Route path="/Register" component={Register} />
-        <Route path="/UsersList" component={usersList} />
-      </Switch>
-    </Router>
+    <div className="App">
+          <RouterProvider router={router} />
+    </div>
   );
 }
 
-export default Router;
+export default App;
+
