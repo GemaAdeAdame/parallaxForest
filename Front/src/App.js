@@ -2,6 +2,7 @@ import React from 'react'
 import Home from './components/Home/Home'
 import Login from './components/login/login.jsx'
 import Register from './components/registro/register.jsx'
+import Birds from './components/Birds/Birds'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Home />
       <Login />
       <Register />
+      <Birds />
     </div>
   )
 }

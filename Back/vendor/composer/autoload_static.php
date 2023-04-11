@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1f21f15cd308d3001ff5349815094183
+class ComposerStaticInit7075f3494762a7035dba79ee22bf0863
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -443,14 +443,23 @@ class ComposerStaticInit1f21f15cd308d3001ff5349815094183
     );
 
     public static $classMap = array (
+        'App\\Controller\\ApiBirdsController' => __DIR__ . '/../..' . '/src/Controller/ApiBirdsController.php',
+        'App\\Controller\\BirdsController' => __DIR__ . '/../..' . '/src/Controller/BirdsController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
+        'App\\Controller\\PostController' => __DIR__ . '/../..' . '/src/Controller/PostController.php',
         'App\\Controller\\RegisterController' => __DIR__ . '/../..' . '/src/Controller/RegisterController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Controller\\UsersListController' => __DIR__ . '/../..' . '/src/Controller/UsersListController.php',
+        'App\\Entity\\Birds' => __DIR__ . '/../..' . '/src/Entity/Birds.php',
+        'App\\Entity\\Post' => __DIR__ . '/../..' . '/src/Entity/Post.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Form\\BirdsType' => __DIR__ . '/../..' . '/src/Form/BirdsType.php',
+        'App\\Form\\PostType' => __DIR__ . '/../..' . '/src/Form/PostType.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\BirdsRepository' => __DIR__ . '/../..' . '/src/Repository/BirdsRepository.php',
+        'App\\Repository\\PostRepository' => __DIR__ . '/../..' . '/src/Repository/PostRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'App\\Security\\AppCustomAuthenticator' => __DIR__ . '/../..' . '/src/Security/AppCustomAuthenticator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -520,57 +529,6 @@ class ComposerStaticInit1f21f15cd308d3001ff5349815094183
         'Doctrine\\Bundle\\DoctrineBundle\\Repository\\LazyServiceEntityRepository' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Repository/LazyServiceEntityRepository.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepository' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Repository/ServiceEntityRepository.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Repository\\ServiceEntityRepositoryInterface' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Repository/ServiceEntityRepositoryInterface.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Builder\\BundleConfigurationBuilder' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Builder/BundleConfigurationBuilder.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\BundleTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/BundleTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\CacheSchemaSubscriberTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/CacheSchemaSubscriberTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Command\\CreateDatabaseDoctrineTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Command/CreateDatabaseDoctrineTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Command\\DropDatabaseDoctrineTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Command/DropDatabaseDoctrineTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Command\\ImportMappingDoctrineCommandTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Command/ImportMappingDoctrineCommandTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\ConnectionFactoryTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/ConnectionFactoryTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\ContainerTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/ContainerTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DataCollector\\DoctrineDataCollectorTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DataCollector/DoctrineDataCollectorTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Dbal\\Logging\\BacktraceLoggerTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Dbal/Logging/BacktraceLoggerTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Dbal\\RegexSchemaAssetFilterTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Dbal/RegexSchemaAssetFilterTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Dbal\\SchemaAssetsFilterManagerTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Dbal/SchemaAssetsFilterManagerTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\AbstractDoctrineExtensionTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/AbstractDoctrineExtensionTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Compiler\\CacheCompatibilityPassTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Compiler/CacheCompatibilityPassTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Compiler\\EntityListenerPassTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Compiler/EntityListenerPassTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Compiler\\IdGeneratorPassTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Compiler/IdGeneratorPassTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Compiler\\MiddlewarePassTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Compiler/MiddlewarePassTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Compiler\\RemoveLoggingMiddlewarePassTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Compiler/RemoveLoggingMiddlewarePassTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\ConfigurationTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/ConfigurationTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\DoctrineExtensionTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/DoctrineExtensionTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Fixtures\\CustomEntityListenerServiceResolver' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Fixtures/CustomEntityListenerServiceResolver.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Fixtures\\CustomIdGenerator' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Fixtures/CustomIdGenerator.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Fixtures\\DbalTestKernel' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Fixtures/DbalTestKernel.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Fixtures\\InvokableEntityListener' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Fixtures/InvokableEntityListener.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Fixtures\\Php8EntityListener' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Fixtures/Php8EntityListener.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Fixtures\\Php8EventListener' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Fixtures/Php8EventListener.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\Fixtures\\TestKernel' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/Fixtures/TestKernel.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\TestDatetimeFunction' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/TestDatetimeFunction.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\TestFilter' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/TestFilter.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\TestNumericFunction' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/TestNumericFunction.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\TestStringFunction' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/TestStringFunction.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\TestType' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/TestType.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\XMLSchemaTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/XMLSchemaTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\XmlDoctrineExtensionTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/XmlDoctrineExtensionTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\DependencyInjection\\YamlDoctrineExtensionTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/DependencyInjection/YamlDoctrineExtensionTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\LazyLoadingEntityManagerInterface' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/LazyLoadingEntityManagerInterface.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\LazyObjectEntityManagerInterface' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/LazyObjectEntityManagerInterface.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\LockStoreSchemaListenerTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/LockStoreSchemaListenerTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Mapping\\ContainerEntityListenerResolverTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Mapping/ContainerEntityListenerResolverTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Mapping\\DisconnectedMetadataFactoryTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Mapping/DisconnectedMetadataFactoryTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Middleware\\BacktraceDebugDataHolderTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Middleware/BacktraceDebugDataHolderTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Middleware\\DebugMiddlewareTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Middleware/DebugMiddlewareTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\ProfilerTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/ProfilerTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\RegistryTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/RegistryTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Repository\\ContainerRepositoryFactoryTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Repository/ContainerRepositoryFactoryTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Repository\\ServiceEntityRepositoryTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Repository/ServiceEntityRepositoryTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\ServiceRepositoryTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/ServiceRepositoryTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\TestCase' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/TestCase.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\TestCaseAllPublicCompilerPass' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/TestCaseAllPublicCompilerPass.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\Twig\\DoctrineExtensionTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/Twig/DoctrineExtensionTest.php',
-        'Doctrine\\Bundle\\DoctrineBundle\\Tests\\UrlOverrideTest' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Tests/UrlOverrideTest.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Twig\\DoctrineExtension' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Twig/DoctrineExtension.php',
         'Doctrine\\Bundle\\MigrationsBundle\\Collector\\MigrationsCollector' => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle/Collector/MigrationsCollector.php',
         'Doctrine\\Bundle\\MigrationsBundle\\Collector\\MigrationsFlattener' => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle/Collector/MigrationsFlattener.php',
@@ -3879,7 +3837,6 @@ class ComposerStaticInit1f21f15cd308d3001ff5349815094183
         'Symfony\\Component\\String\\Inflector\\FrenchInflector' => __DIR__ . '/..' . '/symfony/string/Inflector/FrenchInflector.php',
         'Symfony\\Component\\String\\Inflector\\InflectorInterface' => __DIR__ . '/..' . '/symfony/string/Inflector/InflectorInterface.php',
         'Symfony\\Component\\String\\LazyString' => __DIR__ . '/..' . '/symfony/string/LazyString.php',
-        'Symfony\\Component\\String\\Resources\\WcswidthDataGenerator' => __DIR__ . '/..' . '/symfony/string/Resources/WcswidthDataGenerator.php',
         'Symfony\\Component\\String\\Slugger\\AsciiSlugger' => __DIR__ . '/..' . '/symfony/string/Slugger/AsciiSlugger.php',
         'Symfony\\Component\\String\\Slugger\\SluggerInterface' => __DIR__ . '/..' . '/symfony/string/Slugger/SluggerInterface.php',
         'Symfony\\Component\\String\\UnicodeString' => __DIR__ . '/..' . '/symfony/string/UnicodeString.php',
@@ -4479,9 +4436,9 @@ class ComposerStaticInit1f21f15cd308d3001ff5349815094183
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1f21f15cd308d3001ff5349815094183::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1f21f15cd308d3001ff5349815094183::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit1f21f15cd308d3001ff5349815094183::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7075f3494762a7035dba79ee22bf0863::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7075f3494762a7035dba79ee22bf0863::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit7075f3494762a7035dba79ee22bf0863::$classMap;
 
         }, null, ClassLoader::class);
     }

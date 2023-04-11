@@ -8,3 +8,13 @@ register:
     path: /api/register
     controller: App\Controller\RegisterController::register
     methods: ['POST']
+
+api_birds:
+    path: /api/birds
+    methods: [POST, GET]
+    controller: App\Controller\ApiController::postBirds
+
+app_post:
+    path: /api/post
+    methods: [POST, GET]
+    controller: App\Controller\PostController::likeBird
