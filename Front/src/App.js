@@ -1,36 +1,17 @@
-import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-/*import Home from "./components/Home";
-import NavBar from "./components/NavBar";
-import Repos from "./components/Repos";
-import Skills from "./components/Skills";
-import AboutMe from "./components/AboutMe";
-import Contact from "./components/Contact";
-import MusicPlayer from "./components/MusicPlayer";*/
-import Login from "./components/login/Login"
+import React from 'react'
+import Home from './components/Home/Home'
+import Login from './components/login/login.jsx'
+import Register from './components/registro/register.jsx'
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: (
-        <>
-        
-          <Login />
-          
-        </>
-      ),
-    },
-  ]);
-
   return (
-    <div className="App">
-      <RouterProvider router={router} />
+    <div>
+      <Home />
+      <Login />
+      <Register />
     </div>
-  );
+  )
 }
 
-export default App;
-
-
+export default App
 

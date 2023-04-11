@@ -38,6 +38,7 @@ function Register() {
             ) : (
                 <section>
                     <h1>Registro de usuario</h1>
+
                         <div className='box-registration'>
                             <form onSubmit={handleSubmit}>
                                 <label htmlFor='username'>username</label>
@@ -61,7 +62,7 @@ function Register() {
                                 <button className='btn'>Registrarse</button>
                             </form>
 
-                            <a href="/login" className='btn-login'>Iniciar sesión</a>
+                            <a href="/login" className='btn-login'>Iniciar sesión</a> 
                         </div>
                 </section>
             )}
