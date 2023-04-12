@@ -5,6 +5,7 @@ import Pista from '../images/lupa.gif'
 import Ubicacion from '../images/mapa.gif'
 import Parallax from "./Parallax";
 import Register from '../registro/register';
+
 import './Home.css';
 
 function Home() {

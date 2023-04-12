@@ -1,14 +1,20 @@
 import React, {useState} from 'react'
 import axios from '../../api/axios'
+import './register.css';
+
+
 
 
 const REGISTRATION_URL = '/api/register'
+
 
 function Register() {
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [success, setSuccess] = useState(false)
+   
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -63,7 +69,7 @@ function Register() {
                                 />
                                 <button className='btn'>Registrarse</button>
                             </form>
-                            <button className='btn-login' onClick={() => window.location.pathname='/Login'}>Ir al inicio de sesión</button>
+                            <button className='btn-login' onClick={() => window.location.pathname='/Login'}>O inicia de sesión</button>
                         </div>
                 </section>
             )}
