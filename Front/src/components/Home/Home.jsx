@@ -13,7 +13,7 @@ return(
   <>
 
     <Parallax />
-
+    <div className="sec">
     <div className="container">
 
       <div className="textoInicio">
@@ -24,7 +24,7 @@ return(
             ¿Nos ayudas a saber qué ocurre en nuestro entorno ahora?</p>
       </div>
 
-      <div className="steps">
+      <div className="steps pasos">
 
         <div className="step1"> 
           <img src={Ubicacion} alt="" />
@@ -47,7 +47,7 @@ return(
       </div>
 
     </div>
-
+    </div>
   </>
 
 )

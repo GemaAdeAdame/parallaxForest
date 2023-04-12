@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import axios from '../../api/axios'
+import Logo from '../images/logoAventurero.png';
+import GolondrinaL from '../images/birdLeft.png';
+import GolondrinaR from '../images/birdRight.png';
 
 const REGISTRATION_URL = '/api/register'
 
@@ -29,19 +32,27 @@ function Register() {
     }
 
   return (
-    <div>
+    
+           <div className='d-flex container justify-content-center'>
+    <div className=''>
+          <header>       
+           <img src={GolondrinaL} id="bird1" />
+           <img src={Logo} />
+          <img src={GolondrinaR} id="bird2" /> 
+      </header>
         {success ? (
                 <section className='success'>
                     <h2>¡Registro completado!</h2>
                     <a href='#' className='btn-login'>Ve al inicio de sesión</a>
                 </section> 
             ) : (
-                <section>
+                <section id='secRegister'>
                     <h1>Registro de usuario</h1>
 
                         <div className='box-registration'>
                             <form onSubmit={handleSubmit}>
-                                <label htmlFor='username'>username</label>
+                            <div  className="mb-3">
+                                <label htmlFor='username'>Usuario</label>
                                 <input
                                     type='text'
                                     id='username'
@@ -49,8 +60,11 @@ function Register() {
                                     onChange={(e) => setUsername(e.target.value)}
                                     value={username}
                                     required
+                                    className='form-control'
+                                    minLength={6} 
                                 />
-
+                            </div>
+                            <div  className="mb-3">
                                 <label htmlFor='password'>Contraseña</label>
                                 <input
                                     type='password'
@@ -58,14 +72,19 @@ function Register() {
                                     onChange={(e) => setPassword(e.target.value)}
                                     value={password}
                                     required
+                                    className='form-control'
+                                    minLength={6} 
                                 />
-                                <button className='btn'>Registrarse</button>
+                                </div>
+                                <button  className='btnAzul'>Registrarse</button>
+                                <a href="/login" className='btn-login'>Iniciar sesión</a> 
                             </form>
 
-                            <a href="/login" className='btn-login'>Iniciar sesión</a> 
+                           
                         </div>
                 </section>
             )}
+    </div>
     </div>
   )
 }
