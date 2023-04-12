@@ -43,7 +43,7 @@ return(
       </div>
 
       <div className="containerFlex">
-        <button src="/Register" className="greenbtn">¡Empezamos!</button>
+        <button src="#" className="greenbtn">¡Empezamos!</button>
       </div>
 
     </div>

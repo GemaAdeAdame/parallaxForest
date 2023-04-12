@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from '../../api/axios';
-
+import jwtDecode from 'jwt-decode';
 const LOGIN_URL = '/api/login_check';
 
 
@@ -21,14 +21,31 @@ function Login() {
                     }
             )
 
-            const accessToken = response.data;
-            const user = { username: username, accessToken: accessToken };
+            const accessToken = response.data.token;
+            const token = { accessToken: accessToken };
+            console.log(accessToken);
             
             const storedToken = window.localStorage.setItem(
-                'loggedAppUser', JSON.stringify(user)
+                'loggedAppUser', accessToken
             );
 
             console.log(storedToken)
+
+            const auth_username = { username: username }
+            const stored_username = window.localStorage.setItem(
+                'name', JSON.stringify(auth_username)
+            );
+            console.log(stored_username)
+
+            const decoded_token = jwtDecode(accessToken)
+            console.log(decoded_token);
+
+            const decoded_role = decoded_token.roles
+
+            const userRole = { role: decoded_role }
+            const stored_roles = window.localStorage.setItem(
+                'role', JSON.stringify(userRole)
+            )
 
             setUsername('')
             setPassword('')

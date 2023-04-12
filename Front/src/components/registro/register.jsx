@@ -62,7 +62,7 @@ function Register() {
                                 <button className='btn'>Registrarse</button>
                             </form>
 
-                            <a href="/login" className='btn-login'>Iniciar sesión</a> 
+                            <a href="#" className='btn-login'>O inicia sesión</a> 
                         </div>
                 </section>
             )}
