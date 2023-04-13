@@ -1,6 +1,14 @@
 doctrine:
     dbal:
+        driver: 'pdo_mysql'
+        server_version: '8.0'
+        charset: utf8mb4
         url: '%env(resolve:DATABASE_URL)%'
+        user: 'c0seo'
+        password: '9W4e@dkD'
+        host: '127.0.0.1'
+        port: '3306'
+        dbname: 'c0seo'
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
