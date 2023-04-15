@@ -4,7 +4,7 @@ import Login from './components/login/login.jsx';
 import Register from './components/registro/register.jsx';
 import UsersList from './components/dashboard/usersList';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
+import Mapa from './components/Mapa/mapa'
 function Navbar() {
   return (
     <nav>
@@ -17,6 +17,9 @@ function Navbar() {
         </li>
         <li>
           <Link to="/register">Register</Link>
+        </li>
+        <li>
+          <Link to="/mapa">Mapa</Link>
         </li>
         <li>
           <Link to="/userslist">Users List</Link>
@@ -34,6 +37,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+        <Route exact path="/mapa" element={<Mapa />} />
         <Route exact path="/userslist" element={<UsersList />} />
       </Routes>
     </BrowserRouter>

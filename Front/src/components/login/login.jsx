@@ -41,10 +41,11 @@ function Login() {
             console.log(decoded_token);
 
             const decoded_role = decoded_token.roles
+            console.log(decoded_role[1])
 
-            const userRole = { role: decoded_role }
+           // const userRole = { role: decoded_role }
             const stored_roles = window.localStorage.setItem(
-                'role', JSON.stringify(userRole)
+                 'role', decoded_role
             )
 
             setUsername('')
@@ -57,6 +58,7 @@ function Login() {
             console.log('Oh vaya! No funciona ...')
         }
     }
+    
 
   return (
     <div>

@@ -10,8 +10,8 @@ function UsersList() {
 
       // useEffect(() => {
 
-      if(role === 'ROLE_ADMIN' || role === 'ROLE_ADMIN,ROLE_USER'){
-
+      if(role == ['ROLE_ADMIN,ROLE_USER']){
+        console.log(role[1])
         const axiosRequest= async() => {
       
           await axios.get(DASHBOARD_URL, {
