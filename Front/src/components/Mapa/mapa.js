@@ -1,94 +1,46 @@
-import React, { useState, useEffect, useRef } from 'react';
-import 'ol/ol.css';
-import Map from 'ol/Map';
-import View from 'ol/View';
-import TileLayer from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
-import Feature from 'ol/Feature';
-import Point from 'ol/geom/Point';
-import { fromLonLat } from 'ol/proj';
-import Overlay from 'ol/Overlay';
+import React, { Component } from 'react';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
-const MapWithLocation = () => {
-  const [location, setLocation] = useState(null);
-  const mapRef = useRef();
-  const popupRef = useRef();
+import icono from '../images/iconoUbicacion.svg';
 
-  useEffect(() => {
-    const map = new Map({
-      target: mapRef.current,
-      layers: [
-        new TileLayer({
-          source: new OSM()
-        })
-      ],
-      view: new View({
-        center: [0, 0],
-        zoom: 2
-      })
-    });
+class Map extends Component {
+  componentDidMount() {
+    if (!this.map) {
+        
+      this.map = L.map('map').setView([51.505, -0.09], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; OpenStreetMap contributors'
+      }).addTo(this.map);
 
-    const popup = new Overlay({
-      element: popupRef.current,
-      positioning: 'bottom-center',
-      stopEvent: false
-    });
+      // Obtener la ubicación del usuario
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          const { latitude, longitude } = position.coords;
+          const latLng = L.latLng(latitude, longitude);
 
-    map.addOverlay(popup);
+          // Agregar el marcador en la ubicación del usuario
+          const customIcon = L.icon({
+            iconUrl: icono,
+            iconSize: [64, 64], // tamaño del ícono en píxeles
+            iconAnchor: [16, 32] // posición del ancla del ícono en relación con su parte inferior izquierda
+          });
 
-    return () => {
-      map.setTarget(null);
-    };
-  }, []);
-
-  const handleLocationClick = () => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLocation({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude,
-        date: new Date().toLocaleDateString()
-      });
-    });
-  };
-
-  useEffect(() => {
-    if (location) {
-      const point = new Point(fromLonLat([location.lng, location.lat]));
-      const feature = new Feature({
-        geometry: point
-      });
-
-      const map = mapRef.current.olMap;
-
-      const popup = popupRef.current;
-      popup.innerHTML = `Fecha: ${location.date}`;
-
-      popup.style.display = 'block';
-      popup.style.opacity = 1;
-
-      popup.addEventListener('mouseout', () => {
-        popup.style.display = 'none';
-      });
-
-      const view = map.getView();
-      view.animate({
-        center: point.getCoordinates(),
-        zoom: 13
-      });
-
-      setTimeout(() => {
-        popup.style.display = 'none';
-      }, 3000);
+          L.marker(latLng, { icon: customIcon }).addTo(this.map);
+          this.map.setView(latLng);
+        },
+        error => {
+          console.error(error);
+          alert('No se pudo obtener la ubicación del usuario.');
+        },
+        { timeout: 10000 } // aumentar el tiempo de espera a 10 segundos
+      );
     }
-  }, [location]);
+  }
 
-  return (
-    <div>
-      <button onClick={handleLocationClick}>Obtener mi ubicación</button>
-      <div ref={mapRef} style={{ height: '400px', width: '100%' }}></div>
-      <div ref={popupRef} className="popup"></div>
-    </div>
-  );
+  render() {
+    return <div id="map" style={{ height: '400px', width:'400px' }} />;
+  }
 }
 
-export default MapWithLocation;
+export default Map;
