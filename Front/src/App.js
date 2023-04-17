@@ -6,7 +6,8 @@ import UsersList from './components/dashboard/usersList';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Coordenadas from './components/Mapa/coordenadas';
 import Mapa from './components/Mapa/mapa';
-import Fecha from './components/Fecha/Fecha'
+import Fecha from './components/Fecha/Fecha';
+import Birds from './components/Birds/Birds'
 function Navbar() {
   return (
     <nav>
@@ -30,6 +31,9 @@ function Navbar() {
           <Link to="/fecha">Fecha</Link>
         </li>
         <li>
+          <Link to="/birds">Birds</Link>
+        </li>
+        <li>
           <Link to="/userslist">Users List</Link>
         </li>
       </ul>
@@ -48,6 +52,7 @@ function App() {
         <Route exact path="/coordenadas" element={<Coordenadas />} />
         <Route exact path="/mapa" element={<Mapa />} />
         <Route exact path="/fecha" element={<Fecha />} />
+        <Route exact path="/birds" element={<Birds />} />
         <Route exact path="/userslist" element={<UsersList />} />
       </Routes>
     </BrowserRouter>

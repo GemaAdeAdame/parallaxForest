@@ -421,8 +421,8 @@ class ComposerStaticInitb9e66c5c7705dce25c4961195fc03ebf
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
-            1 => __DIR__ . '/..' . '/doctrine/common/src',
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
@@ -443,14 +443,26 @@ class ComposerStaticInitb9e66c5c7705dce25c4961195fc03ebf
     );
 
     public static $classMap = array (
+        'App\\Controller\\ApiBirdsController' => __DIR__ . '/../..' . '/src/Controller/ApiBirdsController.php',
+        'App\\Controller\\BirdsController' => __DIR__ . '/../..' . '/src/Controller/BirdsController.php',
+        'App\\Controller\\DateController' => __DIR__ . '/../..' . '/src/Controller/DateController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
+        'App\\Controller\\PostController' => __DIR__ . '/../..' . '/src/Controller/PostController.php',
         'App\\Controller\\RegisterController' => __DIR__ . '/../..' . '/src/Controller/RegisterController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Controller\\UsersListController' => __DIR__ . '/../..' . '/src/Controller/UsersListController.php',
+        'App\\Entity\\Birds' => __DIR__ . '/../..' . '/src/Entity/Birds.php',
+        'App\\Entity\\Fecha' => __DIR__ . '/../..' . '/src/Entity/Fecha.php',
+        'App\\Entity\\Post' => __DIR__ . '/../..' . '/src/Entity/Post.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Form\\BirdsType' => __DIR__ . '/../..' . '/src/Form/BirdsType.php',
+        'App\\Form\\PostType' => __DIR__ . '/../..' . '/src/Form/PostType.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\BirdsRepository' => __DIR__ . '/../..' . '/src/Repository/BirdsRepository.php',
+        'App\\Repository\\FechaRepository' => __DIR__ . '/../..' . '/src/Repository/FechaRepository.php',
+        'App\\Repository\\PostRepository' => __DIR__ . '/../..' . '/src/Repository/PostRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'App\\Security\\AppCustomAuthenticator' => __DIR__ . '/../..' . '/src/Security/AppCustomAuthenticator.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -1615,6 +1627,7 @@ class ComposerStaticInitb9e66c5c7705dce25c4961195fc03ebf
         'Doctrine\\ORM\\Tools\\Pagination\\LimitSubqueryOutputWalker' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/LimitSubqueryOutputWalker.php',
         'Doctrine\\ORM\\Tools\\Pagination\\LimitSubqueryWalker' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/LimitSubqueryWalker.php',
         'Doctrine\\ORM\\Tools\\Pagination\\Paginator' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/Paginator.php',
+        'Doctrine\\ORM\\Tools\\Pagination\\RootTypeWalker' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/RootTypeWalker.php',
         'Doctrine\\ORM\\Tools\\Pagination\\RowNumberOverFunction' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/RowNumberOverFunction.php',
         'Doctrine\\ORM\\Tools\\Pagination\\WhereInWalker' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Tools/Pagination/WhereInWalker.php',
         'Doctrine\\ORM\\Tools\\ResolveTargetEntityListener' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Tools/ResolveTargetEntityListener.php',
