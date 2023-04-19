@@ -3,7 +3,7 @@
         'name' => 'symfony/skeleton',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'a531974584e47dd7574970837c17f91e37c28780',
+        'reference' => 'f14162fe1aa00e3225bf6a652b991580627a8406',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -288,6 +288,15 @@
             'provided' => array(
                 0 => '1.0|2.0',
             ),
+        ),
+        'sensio/framework-extra-bundle' => array(
+            'pretty_version' => 'v6.2.10',
+            'version' => '6.2.10.0',
+            'reference' => '2f886f4b31f23c76496901acaedfedb6936ba61f',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../sensio/framework-extra-bundle',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'stella-maris/clock' => array(
             'pretty_version' => '0.1.7',
@@ -688,7 +697,7 @@
         'symfony/skeleton' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'a531974584e47dd7574970837c17f91e37c28780',
+            'reference' => 'f14162fe1aa00e3225bf6a652b991580627a8406',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

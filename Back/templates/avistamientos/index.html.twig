@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Avistamientos index{% endblock %}
+
+{% block body %}
+    <h1>Avistamientos index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fechas</th>
+                <th>Longitud</th>
+                <th>Latitud</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for avistamiento in avistamientos %}
+            <tr>
+                <td>{{ avistamiento.id }}</td>
+                <td>{{ avistamiento.Fechas ? avistamiento.Fechas|date('Y-m-d') : '' }}</td>
+                <td>{{ avistamiento.Longitud }}</td>
+                <td>{{ avistamiento.Latitud }}</td>
+                <td>
+                    <a href="{{ path('app_avistamientos_show', {'id': avistamiento.id}) }}">show</a>
+                    <a href="{{ path('app_avistamientos_edit', {'id': avistamiento.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_avistamientos_new') }}">Create new</a>
+{% endblock %}

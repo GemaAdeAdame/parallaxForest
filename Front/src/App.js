@@ -8,6 +8,18 @@ import Coordenadas from './components/Mapa/coordenadas';
 import Mapa from './components/Mapa/mapa';
 import Fecha from './components/Fecha/Fecha';
 import Birds from './components/Birds/Birds'
+import Avistamientos from './components/Avistamientos/Avistamientos';
+
+function CoordenadasMapaFecha() {
+  return (
+    <>
+      <Coordenadas />
+      <Mapa />
+      <Fecha />
+    </>
+  );
+}
+
 function Navbar() {
   return (
     <nav>
@@ -22,19 +34,16 @@ function Navbar() {
           <Link to="/register">Register</Link>
         </li>
         <li>
-          <Link to="/coordenadas">Coordenadas</Link>
-        </li>
-        <li>
-          <Link to="/mapa">Mapa</Link>
-        </li>
-        <li>
-          <Link to="/fecha">Fecha</Link>
+          <Link to="/coordenadasmapafecha">CoordenadasMapaFecha</Link>
         </li>
         <li>
           <Link to="/birds">Birds</Link>
         </li>
         <li>
           <Link to="/userslist">Users List</Link>
+        </li>
+        <li>
+          <Link to="/avistamientos">Avistamientos</Link>
         </li>
       </ul>
     </nav>
@@ -49,11 +58,10 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
-        <Route exact path="/coordenadas" element={<Coordenadas />} />
-        <Route exact path="/mapa" element={<Mapa />} />
-        <Route exact path="/fecha" element={<Fecha />} />
+        <Route exact path="/coordenadasmapafecha" element={<CoordenadasMapaFecha />} />
         <Route exact path="/birds" element={<Birds />} />
         <Route exact path="/userslist" element={<UsersList />} />
+        <Route exact path="/avistamientos" element={<Avistamientos />} />
       </Routes>
     </BrowserRouter>
   );
