@@ -17,12 +17,12 @@ class DateController extends AbstractController
             'fecha' => $fecha -> format('Y-m-d H:i:s')
         ]);
 
-        // $fecha = new fecha();
-        // $fecha->setCreatedAt(new \DateTime());
-        // $entityManager->persist($fecha);
-        // $entityManager->flush();
+        $fecha = new fecha();
+        $fecha->setCreatedAt(new \DateTime());
+        $entityManager->persist($fecha);
+        $entityManager->flush();
         
-        // return new JsonResponse(['fecha' => $fecha->getCreatedAt()]);
-        // return $this->json($fecha, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
+        return new JsonResponse(['fecha' => $fecha->getCreatedAt()]);
+        return $this->json($fecha, $status = 200, $headers = ['Access-Control-Allow-Origin'=>'*']);
     }
 }

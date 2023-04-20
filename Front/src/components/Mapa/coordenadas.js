@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
+
 function Coordenadas() {
-  const [posicion, setPosicion] = useState([0, 0]);
+  const [posicion, setPosicion] = useState(null);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -13,44 +14,42 @@ function Coordenadas() {
     );
   }, []);
 
-  function handleEnviarCoordenadas() {
-    axios.post('/avistamientos/new', {latitud: posicion[0], longitud: posicion[1]})
-      .then(response => {
-        console.log(response.data);
-        // aquí puedes actualizar tu estado local o mostrar una notificación de éxito
-      })
-      .catch(error => {
-        console.log(error);
-        // aquí puedes mostrar una notificación de error
-      });
+  const enviarCoordenadas = () => {
+    const mapa = {
+      latitud: posicion[0],
+      longitud: posicion[1]
+    };
+
+    console.log(mapa);
+  
+    axios.post('http://localhost:8000/coordenadas/', mapa, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.error(error);
+    }, []);
   }
-
-  // const handleEnviarCoordenadas = async () => {
-  //   const [latitud, longitud] = posicion;
-  //   const response = await fetch('http://127.0.0.1:8000/avistamientos/new', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({
-  //       Latitud: latitud,
-  //       Longitud: longitud
-  //     })
-  //   });
-  //   if (response.ok) {
-  //     console.log('Coordenadas enviadas con éxito');
-  //   } else {
-  //     console.log('Error al enviar coordenadas');
-  //   }
-  // }
-
+  
   return (
+    
     <div className="mapa">
       <h2>Mi ubicación actual:</h2>
-      <p>Latitud: {posicion[0]}</p>
-      <p>Longitud: {posicion[1]}</p>
-      <button onClick={handleEnviarCoordenadas}>Enviar coordenadas</button>
+      {posicion ? (
+        <>
+          <p>Latitud: {posicion[0]}</p>
+          <p>Longitud: {posicion[1]}</p>
+          <button onClick={enviarCoordenadas}>Enviar coordenadas</button>
+        </>
+      ) : (
+        <p>Buscando tu ubicación...</p>
+      )}
     </div>
   );
 }
+
 export default Coordenadas
